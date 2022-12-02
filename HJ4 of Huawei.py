@@ -27,8 +27,8 @@ solution_1:
 while True:
     try:
         str = input().strip()
-        for i in range(0, len(str), 8):
-           print("{0:0<8}".format(str[i:i+8]))
+        for i in range(0, len(str), 8):  #i 输出的0，8，16，32....
+           print("{0:0<8}".format(str[i:i+8])). #{0:0<8}意思是小于8位长度后面用0补齐
     except:
         break
         
