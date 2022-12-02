@@ -13,11 +13,11 @@ HJ5 进制转换
 """
 
 
-solution_1:    
+########solution_1########   
 
 print(int(input(),16)) #int(s,16) 可以直接转换
 
-solution_2:
+########solution_2########
  
 str1 = input()
 str2 = str1[2:]
