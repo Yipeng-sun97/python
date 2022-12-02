@@ -18,4 +18,10 @@ hello nowcoder
 '''
 
 s = input()
-print(len(s.strip().split()[1]))
+print(len(s.strip().split()[1])) #print(len(s.strip().split(" ")[1]))
+
+
+或者
+
+s = input()
+print(len(s.split()[-1])) #print(len(s.split(" ")[-1]))
