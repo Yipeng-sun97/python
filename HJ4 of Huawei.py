@@ -31,6 +31,16 @@ while True:
            print("{0:0<8}".format(str[i:i+8])). #{0:0<8}意思是小于8位长度后面用0补齐
     except:
         break
+'''       
+ >>> "{:>8}".format('abc')
+'     abc'
+>>> "{0:<8}".format('abc')
+'abc     '
+>>> "{0:_<8}".format('abc')
+'abc_____'
+>>> "{0:0>8}".format('3.14')
+'00003.14'
+'''
         
 solution_2:
   
