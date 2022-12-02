@@ -17,6 +17,9 @@ hello nowcoder
 
 '''
 
+##########solution##########
+
+
 s = input()
 print(len(s.strip().split()[1])) #print(len(s.strip().split(" ")[1]))
 
@@ -27,7 +30,7 @@ s = input()
 print(len(s.split()[-1])) #print(len(s.split(" ")[-1]))
 
 
-函数说明：
+#########函数说明############
 s.strip() 的作用是删除s首尾的空值
 
 Eg：
