@@ -25,3 +25,22 @@ print(len(s.strip().split()[1])) #print(len(s.strip().split(" ")[1]))
 
 s = input()
 print(len(s.split()[-1])) #print(len(s.split(" ")[-1]))
+
+
+函数说明：
+s.strip() 的作用是删除s首尾的空值
+
+Eg：
+
+str = "00000003210Runoob01230000000"; 
+print str.strip( '0' );  # 去除首尾字符 0
+
+输出：
+3210Runoob0123
+ 
+ 
+str2 = "   Runoob      ";   # 去除首尾空格
+print str2.strip();
+
+输出：
+Runoob
