@@ -36,3 +36,17 @@ while x!=y:
         y+=1
 z.append(str(int(x))) #循环之后剩下的一定是质数
 print(' '.join(z)) #.join需要str格式时使用
+
+#or#
+x=int(input())
+y=2
+z=[]
+while x!=y:
+    if x%y==0:
+        z.append(y)
+        x=x/y
+    else:
+        y+=1
+z.append(int(x))
+for i in z:
+    print(i,end=" ") #用“ ” 间隔
