@@ -79,6 +79,33 @@ for i in s:
   except:
     continue
 print("%d,%d"%(x,y)) #print("{},{}".format(x,y))
+
+
+#########solution#########
+
+def valid(s):
+    if not s:
+        return False
+    if s[0] in ["A","S","C","W"]:
+        for i in range(1, len(s)):
+            if ord(s[i]) < ord('0') or ord(s[i]) > ord('9'):   #利用ascII 判断是否为数字
+                return False
+        
+s = input().split(";")
+x=y=0
+for i in s:
+    if valid(i)==False:
+        continue
+    elif i[0]=='A':
+        x-=int(i[1:])
+    elif i[0]=='D':
+        x+=int(i[1:])
+    elif i[0]=='W':
+        y+=int(i[1:])
+    elif i[0]=='S':
+        y-=int(i[1:]) 
+
+print("%d,%d"%(x,y))
       
       
     
