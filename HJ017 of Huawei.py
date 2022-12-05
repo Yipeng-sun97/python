@@ -59,6 +59,29 @@ ABC;AKL;DA1;
 
 '''
 
+#######solution#########
+
+s = input().split(";")
+x=y=0
+for i in s:
+  if not i:
+    continue 
+  try:
+    if i[0]=='A':
+      x-=int(i[1:])
+    elif i[0]=='D':
+      x+=int(i[1:])
+    elif i[0]=='W':
+      y+=int(i[1:])
+    elif i[0]=='S':
+      y-=int(i[1:])
+      
+  except:
+    continue
+print("%d,%d"%(x,y))
+      
+      
+    
 
 
 
