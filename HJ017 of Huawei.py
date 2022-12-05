@@ -88,7 +88,7 @@ def valid(s):
         return False
     if s[0] in ["A","S","C","W"]:
         for i in range(1, len(s)):
-            if ord(s[i]) < ord('0') or ord(s[i]) > ord('9'):   #利用ascII 判断是否为数字
+            if ord(s[i]) < ord('0') or ord(s[i]) > ord('9'):   #利用ascII 判断是否为数字 （超出0-9ascii的范围）
                 return False
         
 s = input().split(";")
@@ -109,24 +109,6 @@ print("%d,%d"%(x,y))
       
       
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
