@@ -78,7 +78,7 @@ for i in s:
       
   except:
     continue
-print("%d,%d"%(x,y))
+print("%d,%d"%(x,y)) #print("{},{}".format(x,y))
       
       
     
