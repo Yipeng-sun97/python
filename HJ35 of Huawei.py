@@ -1,4 +1,4 @@
-'''
+
 蛇形矩阵
 
 描述
@@ -17,6 +17,21 @@
 11
 
 
-’‘’
 
 ########solution##########
+
+首先得算第一排：（n+1）*（n+2）//2
+下一排就是上一排去掉第一个元素
+然后之后的都-1
+
+n=int(input())
+res=[]
+
+for i in range(n):
+    if i==0:
+        for e in range(n):
+            res.append((e+1)*(e+2)//2)
+    elif i!=0:
+        res=[e-1 for e in res[1:]]
+        
+    print(' '.join(map(str,res))) #res中是int 改成str才能用.join()
