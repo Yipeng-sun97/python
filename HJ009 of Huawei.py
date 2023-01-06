@@ -24,3 +24,14 @@ s = list(input()[::-1]) # 数字左右翻转，再转化为列表
 s_set = list(set(s)) # 用集合去重，再变成列表
 s_set.sort(key = s.index) # 集合会改变顺序，要恢复原有顺序
 print(''.join(s_set))
+
+
+######solution#####
+
+m = input()
+m = m[::-1]
+n = ''
+for i in m:
+    if i not in n:
+        n += i
+print(n)
