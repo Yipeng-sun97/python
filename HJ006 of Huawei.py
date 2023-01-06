@@ -25,32 +25,20 @@
 在从3开始
 能整除的都是质因子
 #######solution########
-x=int(input())
-y=2
-z=[]
-while x!=y:
-    if x%y==0:
-        x=x/y
-        z.append(str(y)) #输出格式的限制需要转换成str
-    else:
-        y+=1
-z.append(str(int(x))) #循环之后剩下的一定是质数
-print(' '.join(z)) #.join需要str格式时使用
 
-#or#
 n = int(input())
 res = list()
 
-for i in range(2, n + 1):
-    while n % i == 0:
-        n = n // i
+for i in range(2, n + 1):   #从2开始遍历
+    while n % i == 0:       #没有余数的可以继续
+        n = n // i          #n除完之后，需要重新赋值
         res.append(str(i))
 
-    if n == 1:
+    if n == 1:             #n等于1 直接跳出 
         break
 
-    if i > pow(n, 0.5):
-        res.append(str(n))
+    if i > pow(n, 0.5):    #i>n的平方根说明不需要继续了，因为n本身就是质数
+        res.append(str(n))     #比如n=7的时候
         break
 
 print(" ".join(res))
