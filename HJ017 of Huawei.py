@@ -107,7 +107,26 @@ for i in s:
 
 print("%d,%d"%(x,y))
       
-      
+
+#############solution########  
+import sys
+
+s=input()
+s=s.split(';')
+x=y=0
+for i in s:
+    try:
+        if i[0]=='A':
+            x-=int(i[1:])
+        if i[0]=='D':
+            x+=int(i[1:])
+        if i[0]=='S':
+            y-=int(i[1:])
+        if i[0]=='W':
+            y+=int(i[1:])
+    except:
+        continue
+print('%d,%d'%(x,y))
     
 
 
