@@ -38,15 +38,20 @@ z.append(str(int(x))) #循环之后剩下的一定是质数
 print(' '.join(z)) #.join需要str格式时使用
 
 #or#
-x=int(input())
-y=2
-z=[]
-while x!=y:
-    if x%y==0:
-        z.append(y)
-        x=x/y
-    else:
-        y+=1
-z.append(int(x))
-for i in z:
-    print(i,end=" ") #用“ ” 间隔
+n = int(input())
+res = list()
+
+for i in range(2, n + 1):
+    while n % i == 0:
+        n = n // i
+        res.append(str(i))
+
+    if n == 1:
+        break
+
+    if i > pow(n, 0.5):
+        res.append(str(n))
+        break
+
+print(" ".join(res))
+
