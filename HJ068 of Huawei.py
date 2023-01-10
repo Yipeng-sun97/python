@@ -25,4 +25,18 @@ s = sorted(s, key = lambda x : -int(x[1]), reverse=rank)
 for i in s:
     print(i[0], i[1])
     
-  
+#####solution####
+import sys
+
+n=input()
+sign=int(input())
+att=[]
+for i in range(int(n)):
+    s=input().split()
+    att.append(s)
+att=sorted(att,key=lambda x:-int(x[1]),reverse=sign) #sorted排序函数的功能。
+for i in range(int(n)):
+    print('{} {}'.format(att[i][0],att[i][1]))
+    
+    
+    
