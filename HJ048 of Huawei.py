@@ -48,7 +48,7 @@
 输出：
 7 3 1 5 4
 
-####solution######
+####solution（非链表构建）######
 
 import sys
 
