@@ -56,5 +56,23 @@ print(head.val)
 
 
 
+####solution####非链表方法####
+import sys
+
+def func(s,target):
+    print(s[-target])
+
+while True:
+    try:
+        n=input()
+        s=input().split()
+        target=int(input())
+        func(s,target)
+    except:
+        break
+
+
+
+
 
 
