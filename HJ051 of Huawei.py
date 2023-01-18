@@ -33,26 +33,32 @@ struct ListNode
 5
 '''
 
-
+####利用链表###########
 import sys
-#需要自己自己构建链表
+
+# 需要自己自己构建链表
 class ListNode:
-    def __init__(self,val=0,next=None):
-        self.val=val
-        self.next=None
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = None
 
-#根据格式传入input（）
-l = int(input())
-s = list(map(int,input().split()))
-k =int(input())
-head=ListNode()
 
-#利用链表构建
-while k>0:
-    head.next = ListNode(s.pop()) #利用栈输出，这样就是倒序输出
-    head = head.next
-    k-=1
-print(head.val)
+def func(l,s,k):
+    head=ListNode()
+    while k>0:
+        head.next=ListNode(s.pop()) #利用栈倒序输出
+        head=head.next
+        k-=1
+    print(head.val)
+
+while True:
+    try:
+        l = int(input())
+        s = list(map(int, input().split()))
+        k = int(input())
+        func(l,s,k)
+    except:
+        break
 
 
 
