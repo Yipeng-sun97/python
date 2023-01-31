@@ -38,17 +38,22 @@
 '''
 
 
-import sys
+while True:
+    try:
+        n = int(input())
+        m = list(map(int,input().split()))
+        x = list(map(int,input().split()))
+    except:
+        break
+    else:
+        amount = []
+        weights = {0,}
+        for i in range(n):
+            for j in range(x[i]):
+                amount.append(m[i])
+                
+        for i in amount:
+            for j in list(weights):
+                weights.add(i+j)
+        print(len(weights))
 
-n=int(input())
-m=input().split()
-x=input().split()
-amount=[]
-for i in range(n):
-    for j in range(int(x[i])):
-        amount.append(m[j])
-weight={0,}
-for i in amount:
-    for j in list(weight):
-        weight.add(int(i)+j)
-print(len(weight))
